@@ -41,7 +41,7 @@ CREATE TABLE BOOKING (
 ID int IDENTITY(1,1) NOT NULL PRIMARY KEY,
 Tidspunk smalldatetime,
 BrugerID int FOREIGN KEY REFERENCES Bruger(ID),
-MaskineID int
+MaskineID int FOREIGN KEY REFERENCES Maskiner(ID),
 )
 
 INSERT INTO Vaskerier VALUES ('Whitewash inc.', '08:00', '20:00')
@@ -97,3 +97,6 @@ Group By Maskiner.MaskineNavn
 DELETE FROM BOOKING WHERE CAST(Tidspunk as time(0)) BETWEEN '12:00:00' AND '14:00:00'
 
 Update Bruger set [Password] = 'SelinaKyle' where BrugerNavn = 'Batman'
+
+
+
