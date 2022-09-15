@@ -96,4 +96,4 @@ Group By Maskiner.MaskineNavn
 
 DELETE FROM BOOKING WHERE CAST(Tidspunk as time(0)) BETWEEN '12:00:00' AND '13:00:00'
 
-Update Bruger set [Password] = 'SelinaKyle' where BrugerNavn = 'Batman'
+Update Bruger set [Password] = 'SelinaKyle' where Bruger.ID = 3
